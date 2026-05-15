@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hachiko Inu PFP Creator</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.hachiko.sbs/mascot.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <!-- ── TOP BAR ── -->
+    <header class="top-bar">
+
+      <!-- Logo circle — centered at top -->
+      <div class="top-logo-circle">
+        <img
+          src="https://www.hachiko.sbs/mascot.png"
+          alt="Hachiko Inu"
+          onerror="this.style.display='none'; this.parentElement.textContent='🐕';"
+        />
+      </div>
+
+      <!-- Main title -->
+      <div class="top-title">
+        <span class="title-text">Hachiko <span class="title-accent">Inu</span></span>
+      </div>
+
+      <!-- Sub heading -->
+      <p class="top-subheading">Create Your Hachiko Inu PFP</p>
+
+    </header>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main-layout">
+
+      <!-- LEFT — SIDEBAR -->
+      <aside class="sidebar">
+
+        <p class="sidebar-heading">Choose Your Traits</p>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs" id="categoryTabs">
+          <button class="tab-btn active" data-category="backgrounds">BG</button>
+          <button class="tab-btn" data-category="dress">Dress</button>
+          <button class="tab-btn" data-category="eyes">Eyes</button>
+          <button class="tab-btn" data-category="hairs">Hair</button>
+          <button class="tab-btn" data-category="neck">Neck</button>
+        </div>
+
+        <!-- Trait Panels -->
+        <div class="trait-panels" id="traitPanels">
+
+          <div class="trait-panel active" id="panel-backgrounds">
+            <p class="panel-label">Backgrounds</p>
+            <div class="trait-grid" id="grid-backgrounds"></div>
+          </div>
+
+          <div class="trait-panel" id="panel-dress">
+            <p class="panel-label">Dress / Outfit</p>
+            <div class="trait-grid" id="grid-dress"></div>
+          </div>
+
+          <div class="trait-panel" id="panel-eyes">
+            <p class="panel-label">Eyes</p>
+            <div class="trait-grid" id="grid-eyes"></div>
+          </div>
+
+          <div class="trait-panel" id="panel-hairs">
+            <p class="panel-label">Hair</p>
+            <div class="trait-grid" id="grid-hairs"></div>
+          </div>
+
+          <div class="trait-panel" id="panel-neck">
+            <p class="panel-label">Neck / Accessories</p>
+            <div class="trait-grid" id="grid-neck"></div>
+          </div>
+
+        </div>
+
+      </aside>
+
+      <!-- CENTER — AVATAR PREVIEW -->
+      <section class="preview-section">
+
+        <div class="avatar-card" id="avatarCard">
+          <canvas id="avatarCanvas" width="600" height="600"></canvas>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+
+          <!-- Randomize -->
+          <button class="btn btn-random" id="btnRandomize" style="--content: 'Randomize';">
+            <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 3 21 3 21 8"/>
+              <line x1="4" y1="20" x2="21" y2="3"/>
+              <polyline points="21 16 21 21 16 21"/>
+              <line x1="15" y1="15" x2="21" y2="21"/>
+            </svg>
+            <div class="left"></div>
+            Randomize
+            <div class="right"></div>
+          </button>
+
+          <!-- Reset -->
+          <button class="btn-reset" id="btnReset" style="--content: 'Reset';">
+            <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="1 4 1 10 7 10"/>
+              <path d="M3.51 15a9 9 0 1 0 .49-3.54"/>
+            </svg>
+            <div class="left"></div>
+            Reset
+            <div class="right"></div>
+          </button>
+
+          <!-- Download -->
+          <button class="btn btn-download" id="btnDownload">
+            <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download
+          </button>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+ <!-- Scripts -->
+  <script src="traits.js"></script>
+  <script src="avatar.js"></script>
+  <script src="app.js"></script>
+  <script src="tabs.js"></script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const canvas = document.getElementById('avatarCanvas');
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+    });
+  </script>
+
+</body>
+</html>
