@@ -98,7 +98,6 @@ dress: [
   { name: 'HODL', path: 'assets/dress/HODL.png' },
 
   { name: 'Turtleneck Blue',    path: 'assets/dress/Turtleneck Blue.png' },
-  { name: 'Turtleneck Green',   path: 'assets/dress/Turtleneck Green.png' },
   { name: 'Turtleneck Grey',    path: 'assets/dress/Turtleneck Grey.png' },
   { name: 'Turtleneck Pink',    path: 'assets/dress/Turtleneck Pink.png' },
 
