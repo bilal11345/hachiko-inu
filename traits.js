@@ -143,8 +143,6 @@ hairs: [
 
   { name: 'Army helmet',             path: 'assets/hairs/Army helmet (camo light brown).png' },
 
-  { name: 'Backwards Hat Blue',      path: 'assets/hairs/Backwards Hat Blue.png' },
-  { name: 'Backwards Hat Red',       path: 'assets/hairs/Backwards Hat Red.png' },
   { name: 'blue cap',                path: 'assets/hairs/blue cap.png' },
 
 
@@ -233,6 +231,8 @@ neck: [
   { name: 'Bow Tie Blue', path: 'assets/neck/Bow Tie Blue.png' },
   { name: 'Bow Tie Pink', path: 'assets/neck/Bow Tie Pink.png' },
   { name: 'Gold Medal', path: 'assets/neck/Gold Medal.png' },
+  { name: 'Goldchain', path: 'assets/neck/hachiko collar goldchain.png' },
+  { name: 'Goldchainred', path: 'assets/neck/hachiko collar goldchainred.png' },
   { name: 'Hawaii flowers on neck', path: 'assets/neck/Hawaii flowers on neck.png' },
   { name: 'Scarf Blue', path: 'assets/neck/Scarf Blue.png' },
   { name: 'Scarf Green', path: 'assets/neck/Scarf Green.png' },
