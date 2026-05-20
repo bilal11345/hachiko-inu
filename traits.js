@@ -161,7 +161,6 @@ hairs: [
   { name: 'Devil horns',             path: 'assets/hairs/Devil horns.png' },
 
   { name: 'Durag Black',             path: 'assets/hairs/Durag Black.png' },
-  { name: 'Durag Orange',            path: 'assets/hairs/Durag Orange.png' },
   { name: 'Durag Pink',              path: 'assets/hairs/Durag Pink.png' },
 
   { name: 'Floki helmet',            path: 'assets/hairs/Floki helmet.png' },
